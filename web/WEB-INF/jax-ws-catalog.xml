@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://10.10.1.27:8080/wsWeb/list_procesos?wsdl" uri="wsdl/10.10.1.27_8080/wsWeb/list_procesos.wsdl"/>
+    <system systemId="http://10.10.1.27:8080/wsWeb/list_procesos?xsd=1" uri="wsdl/10.10.1.27_8080/wsWeb/list_procesos.xsd_1.xsd"/>
+</catalog>

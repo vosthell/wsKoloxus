@@ -6,10 +6,11 @@ package webs;
 
 import clases.clsConexion;
 import java.sql.CallableStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
-import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import javax.jws.WebService;
 import oracle.jdbc.OracleTypes;
 
 /**
@@ -204,6 +205,63 @@ public class list_procesos {
         nombres[1][1] = "MONICA";
         nombres[1][2] = "VENEGAS";
         return nombres;
+    }
+    
+    @WebMethod(operationName = "consultar_empleado")
+    public String consultar_empleado(@WebParam(name = "cedula") String cedula) {
+        String mensaje = "";
+        clsConexion objConexion = new clsConexion(); 
+        objConexion.conectar_prueba();        
+        String sql = "{call web_api_transacciones.wep_consulta_empleado(?, ?)}";       
+        try
+        {
+            CallableStatement cstm = objConexion.getConexion().prepareCall(sql);            
+            cstm.setString(1, cedula);                          //pv_cedula
+            cstm.registerOutParameter(2, OracleTypes.VARCHAR);  //pv_error          
+            cstm.executeUpdate();  
+            
+            mensaje = ""+cstm.getString(2);        
+        } 
+        catch (Exception sqlException) 
+        {
+            //throw new MyException("error text", sqlException);
+            mensaje = sqlException.getMessage();
+        }       
+        return mensaje;
+        //return "";
+    }
+    
+    @WebMethod(operationName = "consultar_empleado_datos")
+    public String consultar_empleado_datos(@WebParam(name = "cedula") String cedula) {
+        String mensaje = "";
+        ResultSet rs = null; 
+        
+        clsConexion objConexion = new clsConexion(); 
+        objConexion.conectar_prueba();        
+        String sql = "{call web_api_transacciones.wep_consulta_certificado(?, ?, ?)}";       
+        try
+        {
+            CallableStatement cstm = objConexion.getConexion().prepareCall(sql);            
+            cstm.setString(1, cedula);                          //pv_cedula
+            cstm.registerOutParameter(2, OracleTypes.CURSOR);  //c_certificado   
+            cstm.registerOutParameter(3, OracleTypes.VARCHAR);  //pv_error          
+            cstm.executeUpdate();  
+            
+            rs = (ResultSet)cstm.getObject(2); //Forma #1	
+            //rs = ((OracleCallableStatement)cstm).getCursor( 2 ); //Forma #2            
+            //mensaje = ""+cstm.getString(2);   
+            //Lleno el Objeto ... 
+            while( rs.next( ) ){                 //Seteos en base a los obtenido en el Store Procedure. 
+                mensaje = rs.getString("NOMBRE_COMPLETO");                
+            } 
+        } 
+        catch (Exception sqlException) 
+        {
+            //throw new MyException("error text", sqlException);
+            mensaje = sqlException.getMessage();
+        }       
+        return mensaje;
+        //return "";
     }
     
 }

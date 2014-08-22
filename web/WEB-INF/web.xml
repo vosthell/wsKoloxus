@@ -3,10 +3,10 @@
     <listener>
         <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
     </listener>
-    <context-param>
+    <!--<context-param>
         <param-name>userId</param-name>
         <param-value>USRWEBKT2</param-value>
-    </context-param>
+    </context-param>-->
     <servlet>
         <servlet-name>list_procesos</servlet-name>
         <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
