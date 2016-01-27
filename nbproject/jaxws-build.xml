@@ -59,5 +59,37 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/clases"/>
         <delete dir="${build.generated.dir}/jax-wsCache/list_procesos"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-list_procesos"/>
+    <target name="wsimport-client-Service1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Service1"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Service1" destdir="${build.generated.dir}/jax-wsCache/Service1" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Service1/wsdl/10.30.1.4/wsHallcon/Service1.asmx.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://10.30.1.4/wsHallcon/Service1.asmx?WSDL" xnocompile="true" xendorsed="true" package="clave">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Service1/wsdl/10.30.1.4/wsHallcon/Service1.asmx.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Service1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Service1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Service1" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/clave"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Service1"/>
+    </target>
+    <target name="wsimport-client-list_procesos_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/list_procesos_1"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/list_procesos_1" destdir="${build.generated.dir}/jax-wsCache/list_procesos_1" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/list_procesos_1/wsdl/10.30.1.4_8080/wsWeb/list_procesos.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://10.30.1.4:8080/wsWeb/list_procesos?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/list_procesos_1/wsdl/10.30.1.4_8080/wsWeb/list_procesos.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/list_procesos_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/list_procesos_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-list_procesos_1" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/web"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/list_procesos_1"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-list_procesos, wsimport-client-Service1, wsimport-client-list_procesos_1"/>
 </project>

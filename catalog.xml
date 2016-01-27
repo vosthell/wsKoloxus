@@ -2,4 +2,8 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://10.10.1.27:8080/wsWeb/list_procesos?wsdl" uri="src/conf/xml-resources/web-service-references/list_procesos/wsdl/10.10.1.27_8080/wsWeb/list_procesos.wsdl"/>
     <system systemId="http://10.10.1.27:8080/wsWeb/list_procesos?xsd=1" uri="src/conf/xml-resources/web-service-references/list_procesos/wsdl/10.10.1.27_8080/wsWeb/list_procesos.xsd_1.xsd"/>
+    <system systemId="http://secure.cte.gob.ec/wsHallcon/Service1.asmx?WSDL" uri="src/conf/xml-resources/web-service-references/Service1/wsdl/secure.cte.gob.ec/wsHallcon/Service1.asmx.wsdl"/>
+    <system systemId="http://10.30.1.4/wsHallcon/Service1.asmx?WSDL" uri="src/conf/xml-resources/web-service-references/Service1/wsdl/10.30.1.4/wsHallcon/Service1.asmx.wsdl"/>
+    <system systemId="http://10.30.1.4:8080/wsWeb/list_procesos?wsdl" uri="src/conf/xml-resources/web-service-references/list_procesos_1/wsdl/10.30.1.4_8080/wsWeb/list_procesos.wsdl"/>
+    <system systemId="http://10.30.1.4:8080/wsWeb/list_procesos?xsd=1" uri="src/conf/xml-resources/web-service-references/list_procesos_1/wsdl/10.30.1.4_8080/wsWeb/list_procesos.xsd_1.xsd"/>
 </catalog>

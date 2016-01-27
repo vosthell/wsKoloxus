@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://web/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://web/">
+
+<xs:element name="consultar_data_bd" type="tns:consultar_data_bd" />
+
+<xs:element name="consultar_data_bdResponse" type="tns:consultar_data_bdResponse" />
+
+<xs:element name="consultar_data_bd_prueba" type="tns:consultar_data_bd_prueba" />
+
+<xs:element name="consultar_data_bd_pruebaResponse" type="tns:consultar_data_bd_pruebaResponse" />
+
+<xs:element name="consultar_palabra_radar" type="tns:consultar_palabra_radar" />
+
+<xs:element name="consultar_palabra_radarResponse" type="tns:consultar_palabra_radarResponse" />
+
+<xs:complexType name="consultar_data_bd_prueba">
+<xs:sequence>
+<xs:element name="clave" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultar_data_bd_pruebaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultar_data_bd">
+<xs:sequence>
+<xs:element name="clave" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultar_data_bdResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultar_palabra_radar">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="consultar_palabra_radarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

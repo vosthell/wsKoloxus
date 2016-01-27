@@ -23,18 +23,75 @@ public class clsConexion {
         this.conexion = conexion; 
     }  
 
-    public clsConexion conectar_prueba() { 
+    public clsConexion conectar() { 
         //ServletConfig config = null;
                 //super.init(config);
         //String user = config.getInitParameter("userId");
         //Config cfg = new Config();
         //String dbuser   = Config.getProperty("mDbUser");
         //String dbname   = "transito";
-        List<String> data_server = consultarDataBd(); 
+        //List<String> data_server = consultarDataBd();
+        List<String> data_server = consultarDataBd("kaiser2014");
         String ip           = data_server.get(0); //ip server
         String instancia    = data_server.get(1); //instancia
         String usuario      = data_server.get(2); //user
         String pass         = data_server.get(3); //pass       
+
+        try { 
+            Class.forName("oracle.jdbc.OracleDriver"); 
+             String BaseDeDatos = "jdbc:oracle:thin:@" + ip + ":1521:" + instancia;
+            //String BaseDeDatos = "jdbc:oracle:thin:@10.30.1.2:1521:REPLICA"; 
+
+            conexion = DriverManager.getConnection(BaseDeDatos, usuario, pass); 
+            //conexion = DriverManager.getConnection(BaseDeDatos, "USRWEB2","NHU56TGB");    
+            if (conexion != null) { 
+                System.out.println("Conexion exitosa!"); 
+            } else { 
+                System.out.println("Conexion fallida!"); 
+            } 
+        } catch (Exception e) { 
+            e.printStackTrace(); 
+        }        return this; 
+    } 
+    
+    public clsConexion conectar_prueba() { 
+        
+        List<String> data_server = consultarDataBdPrueba("kaiser2014");
+        String ip           = data_server.get(0); //ip server
+        String instancia    = data_server.get(1); //instancia
+        String usuario      = data_server.get(2); //user
+        String pass         = data_server.get(3); //pass       
+
+        try { 
+            Class.forName("oracle.jdbc.OracleDriver"); 
+             String BaseDeDatos = "jdbc:oracle:thin:@" + ip + ":1521:" + instancia;
+            //String BaseDeDatos = "jdbc:oracle:thin:@10.30.1.2:1521:REPLICA"; 
+
+            conexion = DriverManager.getConnection(BaseDeDatos, usuario, pass); 
+            //conexion = DriverManager.getConnection(BaseDeDatos, "USRWEB2","NHU56TGB");    
+            if (conexion != null) { 
+                System.out.println("Conexion exitosa!"); 
+            } else { 
+                System.out.println("Conexion fallida!"); 
+            } 
+        } catch (Exception e) { 
+            e.printStackTrace(); 
+        }        return this; 
+    } 
+    
+    public clsConexion conectar_transito() { 
+        //ServletConfig config = null;
+                //super.init(config);
+        //String user = config.getInitParameter("userId");
+        //Config cfg = new Config();
+        //String dbuser   = Config.getProperty("mDbUser");
+        //String dbname   = "transito";
+        //List<String> data_server = consultarDataBd();
+        List<String> data_server = consultarDataBd("kaiser2014");
+        String ip           = "10.10.1.4"; //ip server
+        String instancia    = "TRANSITO"; //instancia
+        String usuario      = "WEBREPTRANS"; //user
+        String pass         = "webreptrans01"; //pass       
 
         try { 
             Class.forName("oracle.jdbc.OracleDriver"); 
@@ -98,18 +155,32 @@ public class clsConexion {
         }        return resultado; 
     } 
 
-    private static java.util.List<java.lang.String> consultarDataBd() {
+    /*private static java.util.List<java.lang.String> consultarDataBd() {
         clases.ListProcesos_Service service = new clases.ListProcesos_Service();
         clases.ListProcesos port = service.getListProcesosPort();
         return port.consultarDataBd();
     }
 
-   
+    private static java.util.List<java.lang.String> consultarDataBdPrueba() {
+        clases.ListProcesos_Service service = new clases.ListProcesos_Service();
+        clases.ListProcesos port = service.getListProcesosPort();
+        return port.consultarDataBdPrueba();
+    }*/
 
-  
+    //10.30.1.4
+    private static java.util.List<java.lang.String> consultarDataBd(java.lang.String clave) {
+        web.ListProcesos_Service service = new web.ListProcesos_Service();
+        web.ListProcesos port = service.getListProcesosPort();
+        return port.consultarDataBd(clave);
+    }
 
-   
-
-   
+    //10.30.1.4
+    private static java.util.List<java.lang.String> consultarDataBdPrueba(java.lang.String clave) {
+        web.ListProcesos_Service service = new web.ListProcesos_Service();
+        web.ListProcesos port = service.getListProcesosPort();
+        return port.consultarDataBdPrueba(clave);
+    }
+    
+      
 
 }
