@@ -360,6 +360,39 @@ public class list_procesos {
         return words;
     }
     
+     @WebMethod(operationName = "consulta_usuario_web_prueba")
+    public String[] consulta_usuario_web_prueba(@WebParam(name = "cedula") String cedula)
+    {
+        String[] words = new String [5];         
+        clsConexion objConexion = new clsConexion(); 
+        objConexion.conectar_prueba(); 
+        String sql = "{call web_api_transacciones.consulta_usuario_web(?, ?, ?, ?, ?, ?)}";
+        try
+        {
+            CallableStatement cstm = objConexion.getConexion().prepareCall(sql);            
+            cstm.setString(1, cedula);                          //pv_identificacion
+            cstm.registerOutParameter(2, OracleTypes.VARCHAR);  //pv_nombres
+            cstm.registerOutParameter(3, OracleTypes.VARCHAR);  //pv_apellidos
+            cstm.registerOutParameter(4, OracleTypes.VARCHAR);  //pv_email
+            cstm.registerOutParameter(5, OracleTypes.VARCHAR);  //pv_estado
+            cstm.registerOutParameter(6, OracleTypes.VARCHAR);  //pv_error
+            cstm.executeUpdate();              
+           
+            words[0] = cstm.getString(2);  
+            words[1] = cstm.getString(3);   
+            words[2] = cstm.getString(4);   
+            words[3] = cstm.getString(5);  
+            words[4] = cstm.getString(6);  
+            
+            //mensaje = ""+cstm.getString(2);        
+        } catch (Exception sqlException) {
+            //throw new MyException("error text", sqlException);
+            words[0] = sqlException.getMessage();
+        }                  
+        //return mensaje;
+        return words;
+    }
+     
     @WebMethod(operationName = "gcp_consulta_user_app")
     public String[] gcp_consulta_user_app(@WebParam(name = "usuario") String usuario)
     {
