@@ -5,7 +5,7 @@
 package clases;
 import java.sql.*; 
 import java.util.List;
-import javax.servlet.ServletConfig;
+//import javax.servlet.ServletConfig;
 
 /**
  *
@@ -91,7 +91,7 @@ public class clsConexion {
         String ip           = "10.10.1.4"; //ip server
         String instancia    = "TRANSITO"; //instancia
         String usuario      = "WEBREPTRANS"; //user
-        String pass         = "webreptrans01"; //pass       
+        String pass         = "webreptrans20180918"; //pass       
 
         try { 
             Class.forName("oracle.jdbc.OracleDriver"); 
@@ -166,15 +166,27 @@ public class clsConexion {
         clases.ListProcesos port = service.getListProcesosPort();
         return port.consultarDataBdPrueba();
     }*/
+    
 
     //10.30.1.4
+    /*private static java.util.List<java.lang.String> consultarDataBd(java.lang.String clave) {
+        web.ListProcesos_Service service = new web.ListProcesos_Service();
+        web.ListProcesos port = service.getListProcesosPort();
+        return port.consultarDataBd(clave);
+    }
+
+        private static java.util.List<java.lang.String> consultarDataBdPrueba(java.lang.String clave) {
+        web.ListProcesos_Service service = new web.ListProcesos_Service();
+        web.ListProcesos port = service.getListProcesosPort();
+        return port.consultarDataBdPrueba(clave);
+    }*/
+
     private static java.util.List<java.lang.String> consultarDataBd(java.lang.String clave) {
         web.ListProcesos_Service service = new web.ListProcesos_Service();
         web.ListProcesos port = service.getListProcesosPort();
         return port.consultarDataBd(clave);
     }
 
-    //10.30.1.4
     private static java.util.List<java.lang.String> consultarDataBdPrueba(java.lang.String clave) {
         web.ListProcesos_Service service = new web.ListProcesos_Service();
         web.ListProcesos port = service.getListProcesosPort();

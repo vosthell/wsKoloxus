@@ -1286,9 +1286,21 @@ public class list_procesos {
         return data;
     }*/ 
         
-    private static String desencriptar(java.lang.String texto) {
+    /*private static String desencriptar(java.lang.String texto) {
         clave.Service1 service = new clave.Service1();
         clave.Service1Soap port = service.getService1Soap();
+        return port.desencriptar(texto);
+    }*/
+
+    /*private static String desencriptar(java.lang.String texto) {
+        org.tempuri.Service1 service = new org.tempuri.Service1();
+        org.tempuri.Service1Soap port = service.getService1Soap();
+        return port.desencriptar(texto);
+    }*/
+
+    private static String desencriptar(java.lang.String texto) {
+        org.tempuri.Service1 service = new org.tempuri.Service1();
+        org.tempuri.Service1Soap port = service.getService1Soap();
         return port.desencriptar(texto);
     }
 }

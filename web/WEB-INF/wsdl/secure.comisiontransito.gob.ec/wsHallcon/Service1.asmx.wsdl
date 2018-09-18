@@ -1,0 +1,2809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ingresar_trabajo_comunitario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_unidad_judicial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_juez" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_envio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oficio_fiscalia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="instruccion_descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="instruccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sentencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memorandun" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oficio_juzgados" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cumple_trabajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="observaciones" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ingresar_trabajo_comunitarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ingresar_trabajo_comunitarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizar_trabajo_comunitario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_trabajo_comunitario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_unidad_judicial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_juez" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_envio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oficio_fiscalia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="instruccion_descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="instruccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sentencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memorandun" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oficio_juzgados" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cumple_trabajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="observaciones" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizar_trabajo_comunitarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actualizar_trabajo_comunitarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminar_trabajo_comunitario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_trabajo_comunitario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminar_trabajo_comunitarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eliminar_trabajo_comunitarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminar_detencion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_detencion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminar_detencionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eliminar_detencionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminar_detencion_salida">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_detencion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminar_detencion_salidaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eliminar_detencion_salidaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ingresar_detencion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_detencion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hora_detencion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero_parte" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero_boleta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="alcoholemia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="multa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motivo_detencion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lugar_fisico_detenido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion_arresto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="traslado_dinapen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="observaciones" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ingresar_detencionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ingresar_detencionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificar_detencion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_detencion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_detencion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hora_detencion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero_parte" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numero_boleta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="alcoholemia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="multa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motivo_detencion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lugar_fisico_detenido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion_arresto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="traslado_dinapen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="observaciones" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modificar_detencionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="modificar_detencionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_detenciones">
+        <s:complexType />
+      </s:element>
+      <s:element name="consultar_detencionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_detencionesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_trabajo_comunitario">
+        <s:complexType />
+      </s:element>
+      <s:element name="consultar_trabajo_comunitarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_trabajo_comunitarioResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_data_trabajo_comunitario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id_trab_comunitario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_data_trabajo_comunitarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_data_trabajo_comunitarioResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_data_detencion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_detencion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_data_detencionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_data_detencionResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_data_persona_axis">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_data_persona_axisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_data_persona_axisResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_data_persona">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_data_personaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_data_personaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_data_juez">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_data_juezResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_data_juezResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_usuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_usuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_usuarioResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="conciliar_pago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="conciliar_pagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="conciliar_pagoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="pago_cep">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cep" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigo_banco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_pago" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="valor_pagado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="no_recibo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_contable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ajuste" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="pago_cepResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pago_cepResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="encriptar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="texto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="encriptarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="encriptarResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="desencriptar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="texto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="desencriptarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="desencriptarResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ingresar_juez">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellido_1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellido_2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ingresar_juezResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ingresar_juezResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ingresar_detenido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre_2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellido_1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellido_2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ingresar_detenidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ingresar_detenidoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_detenidos_nombre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombres" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_detenidos_nombreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_detenidos_nombreResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_jueces_nombre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombres" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_jueces_nombreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_jueces_nombreResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrar_salida">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_detencion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_salida" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hora_salida" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_juez" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dias_detenido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="observaciones" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="boleta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="alcoholemia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="multa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrar_salidaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="registrar_salidaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_aspirantes_aprobados">
+        <s:complexType />
+      </s:element>
+      <s:element name="consultar_aspirantes_aprobadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_aspirantes_aprobadosResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ingresar_sorteo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cantidad" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ingresar_sorteoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ingresar_sorteoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ingresar_aspirante_favorecido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_aspirante" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ingresar_aspirante_favorecidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ingresar_aspirante_favorecidoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_sorteos">
+        <s:complexType />
+      </s:element>
+      <s:element name="consultar_sorteosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_sorteosResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_aspirantes_sorteados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_sorteo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_aspirantes_sorteadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_aspirantes_sorteadosResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminar_sorteo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_sorteo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="observaciones" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminar_sorteoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eliminar_sorteoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_roles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultar_rolesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultar_rolesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ingresar_trabajo_comunitarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ingresar_trabajo_comunitario" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_trabajo_comunitarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ingresar_trabajo_comunitarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizar_trabajo_comunitarioSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizar_trabajo_comunitario" />
+  </wsdl:message>
+  <wsdl:message name="actualizar_trabajo_comunitarioSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizar_trabajo_comunitarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_trabajo_comunitarioSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminar_trabajo_comunitario" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_trabajo_comunitarioSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminar_trabajo_comunitarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_detencionSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminar_detencion" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_detencionSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminar_detencionResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_detencion_salidaSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminar_detencion_salida" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_detencion_salidaSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminar_detencion_salidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_detencionSoapIn">
+    <wsdl:part name="parameters" element="tns:ingresar_detencion" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_detencionSoapOut">
+    <wsdl:part name="parameters" element="tns:ingresar_detencionResponse" />
+  </wsdl:message>
+  <wsdl:message name="modificar_detencionSoapIn">
+    <wsdl:part name="parameters" element="tns:modificar_detencion" />
+  </wsdl:message>
+  <wsdl:message name="modificar_detencionSoapOut">
+    <wsdl:part name="parameters" element="tns:modificar_detencionResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_detencionesSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_detenciones" />
+  </wsdl:message>
+  <wsdl:message name="consultar_detencionesSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_detencionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_trabajo_comunitarioSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_trabajo_comunitario" />
+  </wsdl:message>
+  <wsdl:message name="consultar_trabajo_comunitarioSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_trabajo_comunitarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_trabajo_comunitarioSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_data_trabajo_comunitario" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_trabajo_comunitarioSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_data_trabajo_comunitarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_detencionSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_data_detencion" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_detencionSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_data_detencionResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_persona_axisSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_data_persona_axis" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_persona_axisSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_data_persona_axisResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_personaSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_data_persona" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_personaSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_data_personaResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_juezSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_data_juez" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_juezSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_data_juezResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_usuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_usuario" />
+  </wsdl:message>
+  <wsdl:message name="consultar_usuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_usuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="conciliar_pagoSoapIn">
+    <wsdl:part name="parameters" element="tns:conciliar_pago" />
+  </wsdl:message>
+  <wsdl:message name="conciliar_pagoSoapOut">
+    <wsdl:part name="parameters" element="tns:conciliar_pagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="pago_cepSoapIn">
+    <wsdl:part name="parameters" element="tns:pago_cep" />
+  </wsdl:message>
+  <wsdl:message name="pago_cepSoapOut">
+    <wsdl:part name="parameters" element="tns:pago_cepResponse" />
+  </wsdl:message>
+  <wsdl:message name="encriptarSoapIn">
+    <wsdl:part name="parameters" element="tns:encriptar" />
+  </wsdl:message>
+  <wsdl:message name="encriptarSoapOut">
+    <wsdl:part name="parameters" element="tns:encriptarResponse" />
+  </wsdl:message>
+  <wsdl:message name="desencriptarSoapIn">
+    <wsdl:part name="parameters" element="tns:desencriptar" />
+  </wsdl:message>
+  <wsdl:message name="desencriptarSoapOut">
+    <wsdl:part name="parameters" element="tns:desencriptarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_juezSoapIn">
+    <wsdl:part name="parameters" element="tns:ingresar_juez" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_juezSoapOut">
+    <wsdl:part name="parameters" element="tns:ingresar_juezResponse" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_detenidoSoapIn">
+    <wsdl:part name="parameters" element="tns:ingresar_detenido" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_detenidoSoapOut">
+    <wsdl:part name="parameters" element="tns:ingresar_detenidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_detenidos_nombreSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_detenidos_nombre" />
+  </wsdl:message>
+  <wsdl:message name="consultar_detenidos_nombreSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_detenidos_nombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_jueces_nombreSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_jueces_nombre" />
+  </wsdl:message>
+  <wsdl:message name="consultar_jueces_nombreSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_jueces_nombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrar_salidaSoapIn">
+    <wsdl:part name="parameters" element="tns:registrar_salida" />
+  </wsdl:message>
+  <wsdl:message name="registrar_salidaSoapOut">
+    <wsdl:part name="parameters" element="tns:registrar_salidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_aspirantes_aprobadosSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_aspirantes_aprobados" />
+  </wsdl:message>
+  <wsdl:message name="consultar_aspirantes_aprobadosSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_aspirantes_aprobadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_sorteoSoapIn">
+    <wsdl:part name="parameters" element="tns:ingresar_sorteo" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_sorteoSoapOut">
+    <wsdl:part name="parameters" element="tns:ingresar_sorteoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_aspirante_favorecidoSoapIn">
+    <wsdl:part name="parameters" element="tns:ingresar_aspirante_favorecido" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_aspirante_favorecidoSoapOut">
+    <wsdl:part name="parameters" element="tns:ingresar_aspirante_favorecidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_sorteosSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_sorteos" />
+  </wsdl:message>
+  <wsdl:message name="consultar_sorteosSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_sorteosResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_aspirantes_sorteadosSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_aspirantes_sorteados" />
+  </wsdl:message>
+  <wsdl:message name="consultar_aspirantes_sorteadosSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_aspirantes_sorteadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_sorteoSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminar_sorteo" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_sorteoSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminar_sorteoResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultar_rolesSoapIn">
+    <wsdl:part name="parameters" element="tns:consultar_roles" />
+  </wsdl:message>
+  <wsdl:message name="consultar_rolesSoapOut">
+    <wsdl:part name="parameters" element="tns:consultar_rolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_trabajo_comunitarioHttpGetIn">
+    <wsdl:part name="id_unidad_judicial" type="s:string" />
+    <wsdl:part name="id_juez" type="s:string" />
+    <wsdl:part name="fecha_envio" type="s:string" />
+    <wsdl:part name="identificacion" type="s:string" />
+    <wsdl:part name="oficio_fiscalia" type="s:string" />
+    <wsdl:part name="instruccion_descripcion" type="s:string" />
+    <wsdl:part name="instruccion" type="s:string" />
+    <wsdl:part name="sentencia" type="s:string" />
+    <wsdl:part name="memorandun" type="s:string" />
+    <wsdl:part name="oficio_juzgados" type="s:string" />
+    <wsdl:part name="cumple_trabajo" type="s:string" />
+    <wsdl:part name="observaciones" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_trabajo_comunitarioHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="actualizar_trabajo_comunitarioHttpGetIn">
+    <wsdl:part name="id_trabajo_comunitario" type="s:string" />
+    <wsdl:part name="id_unidad_judicial" type="s:string" />
+    <wsdl:part name="id_juez" type="s:string" />
+    <wsdl:part name="fecha_envio" type="s:string" />
+    <wsdl:part name="identificacion" type="s:string" />
+    <wsdl:part name="oficio_fiscalia" type="s:string" />
+    <wsdl:part name="instruccion_descripcion" type="s:string" />
+    <wsdl:part name="instruccion" type="s:string" />
+    <wsdl:part name="sentencia" type="s:string" />
+    <wsdl:part name="memorandun" type="s:string" />
+    <wsdl:part name="oficio_juzgados" type="s:string" />
+    <wsdl:part name="cumple_trabajo" type="s:string" />
+    <wsdl:part name="observaciones" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="actualizar_trabajo_comunitarioHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_trabajo_comunitarioHttpGetIn">
+    <wsdl:part name="id_trabajo_comunitario" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_trabajo_comunitarioHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_detencionHttpGetIn">
+    <wsdl:part name="id_detencion" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_detencionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_detencion_salidaHttpGetIn">
+    <wsdl:part name="id_detencion" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_detencion_salidaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_detencionHttpGetIn">
+    <wsdl:part name="fecha_detencion" type="s:string" />
+    <wsdl:part name="hora_detencion" type="s:string" />
+    <wsdl:part name="identificacion" type="s:string" />
+    <wsdl:part name="numero_parte" type="s:string" />
+    <wsdl:part name="numero_boleta" type="s:string" />
+    <wsdl:part name="alcoholemia" type="s:string" />
+    <wsdl:part name="multa" type="s:string" />
+    <wsdl:part name="motivo_detencion" type="s:string" />
+    <wsdl:part name="lugar_fisico_detenido" type="s:string" />
+    <wsdl:part name="direccion_arresto" type="s:string" />
+    <wsdl:part name="traslado_dinapen" type="s:string" />
+    <wsdl:part name="observaciones" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_detencionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="modificar_detencionHttpGetIn">
+    <wsdl:part name="id_detencion" type="s:string" />
+    <wsdl:part name="fecha_detencion" type="s:string" />
+    <wsdl:part name="hora_detencion" type="s:string" />
+    <wsdl:part name="identificacion" type="s:string" />
+    <wsdl:part name="numero_parte" type="s:string" />
+    <wsdl:part name="numero_boleta" type="s:string" />
+    <wsdl:part name="alcoholemia" type="s:string" />
+    <wsdl:part name="multa" type="s:string" />
+    <wsdl:part name="motivo_detencion" type="s:string" />
+    <wsdl:part name="lugar_fisico_detenido" type="s:string" />
+    <wsdl:part name="direccion_arresto" type="s:string" />
+    <wsdl:part name="traslado_dinapen" type="s:string" />
+    <wsdl:part name="observaciones" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="modificar_detencionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_detencionesHttpGetIn" />
+  <wsdl:message name="consultar_detencionesHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="consultar_trabajo_comunitarioHttpGetIn" />
+  <wsdl:message name="consultar_trabajo_comunitarioHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_trabajo_comunitarioHttpGetIn">
+    <wsdl:part name="id_trab_comunitario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_trabajo_comunitarioHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_detencionHttpGetIn">
+    <wsdl:part name="id_detencion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_detencionHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_persona_axisHttpGetIn">
+    <wsdl:part name="identificacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_persona_axisHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_personaHttpGetIn">
+    <wsdl:part name="identificacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_personaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_juezHttpGetIn">
+    <wsdl:part name="identificacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_juezHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_usuarioHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_usuarioHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="conciliar_pagoHttpGetIn">
+    <wsdl:part name="identificacion" type="s:string" />
+    <wsdl:part name="fecha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="conciliar_pagoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="pago_cepHttpGetIn">
+    <wsdl:part name="cep" type="s:string" />
+    <wsdl:part name="codigo_banco" type="s:string" />
+    <wsdl:part name="fecha_pago" type="s:string" />
+    <wsdl:part name="valor_pagado" type="s:string" />
+    <wsdl:part name="no_recibo" type="s:string" />
+    <wsdl:part name="fecha_contable" type="s:string" />
+    <wsdl:part name="canal" type="s:string" />
+    <wsdl:part name="ajuste" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="pago_cepHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="encriptarHttpGetIn">
+    <wsdl:part name="texto" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="encriptarHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="desencriptarHttpGetIn">
+    <wsdl:part name="texto" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="desencriptarHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_juezHttpGetIn">
+    <wsdl:part name="identificacion" type="s:string" />
+    <wsdl:part name="nombre_1" type="s:string" />
+    <wsdl:part name="nombre_2" type="s:string" />
+    <wsdl:part name="apellido_1" type="s:string" />
+    <wsdl:part name="apellido_2" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_juezHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_detenidoHttpGetIn">
+    <wsdl:part name="identificacion" type="s:string" />
+    <wsdl:part name="nombre_1" type="s:string" />
+    <wsdl:part name="nombre_2" type="s:string" />
+    <wsdl:part name="apellido_1" type="s:string" />
+    <wsdl:part name="apellido_2" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_detenidoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_detenidos_nombreHttpGetIn">
+    <wsdl:part name="nombres" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_detenidos_nombreHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="consultar_jueces_nombreHttpGetIn">
+    <wsdl:part name="nombres" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_jueces_nombreHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="registrar_salidaHttpGetIn">
+    <wsdl:part name="id_detencion" type="s:string" />
+    <wsdl:part name="fecha_salida" type="s:string" />
+    <wsdl:part name="hora_salida" type="s:string" />
+    <wsdl:part name="id_juez" type="s:string" />
+    <wsdl:part name="dias_detenido" type="s:string" />
+    <wsdl:part name="observaciones" type="s:string" />
+    <wsdl:part name="boleta" type="s:string" />
+    <wsdl:part name="alcoholemia" type="s:string" />
+    <wsdl:part name="multa" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="registrar_salidaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_aspirantes_aprobadosHttpGetIn" />
+  <wsdl:message name="consultar_aspirantes_aprobadosHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_sorteoHttpGetIn">
+    <wsdl:part name="id_usuario" type="s:string" />
+    <wsdl:part name="descripcion" type="s:string" />
+    <wsdl:part name="cantidad" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_sorteoHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_aspirante_favorecidoHttpGetIn">
+    <wsdl:part name="id_aspirante" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_aspirante_favorecidoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_sorteosHttpGetIn" />
+  <wsdl:message name="consultar_sorteosHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="consultar_aspirantes_sorteadosHttpGetIn">
+    <wsdl:part name="id_sorteo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_aspirantes_sorteadosHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_sorteoHttpGetIn">
+    <wsdl:part name="id_usuario" type="s:string" />
+    <wsdl:part name="id_sorteo" type="s:string" />
+    <wsdl:part name="observaciones" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_sorteoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_rolesHttpGetIn">
+    <wsdl:part name="id_usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_rolesHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_trabajo_comunitarioHttpPostIn">
+    <wsdl:part name="id_unidad_judicial" type="s:string" />
+    <wsdl:part name="id_juez" type="s:string" />
+    <wsdl:part name="fecha_envio" type="s:string" />
+    <wsdl:part name="identificacion" type="s:string" />
+    <wsdl:part name="oficio_fiscalia" type="s:string" />
+    <wsdl:part name="instruccion_descripcion" type="s:string" />
+    <wsdl:part name="instruccion" type="s:string" />
+    <wsdl:part name="sentencia" type="s:string" />
+    <wsdl:part name="memorandun" type="s:string" />
+    <wsdl:part name="oficio_juzgados" type="s:string" />
+    <wsdl:part name="cumple_trabajo" type="s:string" />
+    <wsdl:part name="observaciones" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_trabajo_comunitarioHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="actualizar_trabajo_comunitarioHttpPostIn">
+    <wsdl:part name="id_trabajo_comunitario" type="s:string" />
+    <wsdl:part name="id_unidad_judicial" type="s:string" />
+    <wsdl:part name="id_juez" type="s:string" />
+    <wsdl:part name="fecha_envio" type="s:string" />
+    <wsdl:part name="identificacion" type="s:string" />
+    <wsdl:part name="oficio_fiscalia" type="s:string" />
+    <wsdl:part name="instruccion_descripcion" type="s:string" />
+    <wsdl:part name="instruccion" type="s:string" />
+    <wsdl:part name="sentencia" type="s:string" />
+    <wsdl:part name="memorandun" type="s:string" />
+    <wsdl:part name="oficio_juzgados" type="s:string" />
+    <wsdl:part name="cumple_trabajo" type="s:string" />
+    <wsdl:part name="observaciones" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="actualizar_trabajo_comunitarioHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_trabajo_comunitarioHttpPostIn">
+    <wsdl:part name="id_trabajo_comunitario" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_trabajo_comunitarioHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_detencionHttpPostIn">
+    <wsdl:part name="id_detencion" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_detencionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_detencion_salidaHttpPostIn">
+    <wsdl:part name="id_detencion" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_detencion_salidaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_detencionHttpPostIn">
+    <wsdl:part name="fecha_detencion" type="s:string" />
+    <wsdl:part name="hora_detencion" type="s:string" />
+    <wsdl:part name="identificacion" type="s:string" />
+    <wsdl:part name="numero_parte" type="s:string" />
+    <wsdl:part name="numero_boleta" type="s:string" />
+    <wsdl:part name="alcoholemia" type="s:string" />
+    <wsdl:part name="multa" type="s:string" />
+    <wsdl:part name="motivo_detencion" type="s:string" />
+    <wsdl:part name="lugar_fisico_detenido" type="s:string" />
+    <wsdl:part name="direccion_arresto" type="s:string" />
+    <wsdl:part name="traslado_dinapen" type="s:string" />
+    <wsdl:part name="observaciones" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_detencionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="modificar_detencionHttpPostIn">
+    <wsdl:part name="id_detencion" type="s:string" />
+    <wsdl:part name="fecha_detencion" type="s:string" />
+    <wsdl:part name="hora_detencion" type="s:string" />
+    <wsdl:part name="identificacion" type="s:string" />
+    <wsdl:part name="numero_parte" type="s:string" />
+    <wsdl:part name="numero_boleta" type="s:string" />
+    <wsdl:part name="alcoholemia" type="s:string" />
+    <wsdl:part name="multa" type="s:string" />
+    <wsdl:part name="motivo_detencion" type="s:string" />
+    <wsdl:part name="lugar_fisico_detenido" type="s:string" />
+    <wsdl:part name="direccion_arresto" type="s:string" />
+    <wsdl:part name="traslado_dinapen" type="s:string" />
+    <wsdl:part name="observaciones" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="modificar_detencionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_detencionesHttpPostIn" />
+  <wsdl:message name="consultar_detencionesHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="consultar_trabajo_comunitarioHttpPostIn" />
+  <wsdl:message name="consultar_trabajo_comunitarioHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_trabajo_comunitarioHttpPostIn">
+    <wsdl:part name="id_trab_comunitario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_trabajo_comunitarioHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_detencionHttpPostIn">
+    <wsdl:part name="id_detencion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_detencionHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_persona_axisHttpPostIn">
+    <wsdl:part name="identificacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_persona_axisHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_personaHttpPostIn">
+    <wsdl:part name="identificacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_personaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_juezHttpPostIn">
+    <wsdl:part name="identificacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_data_juezHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_usuarioHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_usuarioHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="conciliar_pagoHttpPostIn">
+    <wsdl:part name="identificacion" type="s:string" />
+    <wsdl:part name="fecha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="conciliar_pagoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="pago_cepHttpPostIn">
+    <wsdl:part name="cep" type="s:string" />
+    <wsdl:part name="codigo_banco" type="s:string" />
+    <wsdl:part name="fecha_pago" type="s:string" />
+    <wsdl:part name="valor_pagado" type="s:string" />
+    <wsdl:part name="no_recibo" type="s:string" />
+    <wsdl:part name="fecha_contable" type="s:string" />
+    <wsdl:part name="canal" type="s:string" />
+    <wsdl:part name="ajuste" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="pago_cepHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="encriptarHttpPostIn">
+    <wsdl:part name="texto" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="encriptarHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="desencriptarHttpPostIn">
+    <wsdl:part name="texto" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="desencriptarHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_juezHttpPostIn">
+    <wsdl:part name="identificacion" type="s:string" />
+    <wsdl:part name="nombre_1" type="s:string" />
+    <wsdl:part name="nombre_2" type="s:string" />
+    <wsdl:part name="apellido_1" type="s:string" />
+    <wsdl:part name="apellido_2" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_juezHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_detenidoHttpPostIn">
+    <wsdl:part name="identificacion" type="s:string" />
+    <wsdl:part name="nombre_1" type="s:string" />
+    <wsdl:part name="nombre_2" type="s:string" />
+    <wsdl:part name="apellido_1" type="s:string" />
+    <wsdl:part name="apellido_2" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_detenidoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_detenidos_nombreHttpPostIn">
+    <wsdl:part name="nombres" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_detenidos_nombreHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="consultar_jueces_nombreHttpPostIn">
+    <wsdl:part name="nombres" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_jueces_nombreHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="registrar_salidaHttpPostIn">
+    <wsdl:part name="id_detencion" type="s:string" />
+    <wsdl:part name="fecha_salida" type="s:string" />
+    <wsdl:part name="hora_salida" type="s:string" />
+    <wsdl:part name="id_juez" type="s:string" />
+    <wsdl:part name="dias_detenido" type="s:string" />
+    <wsdl:part name="observaciones" type="s:string" />
+    <wsdl:part name="boleta" type="s:string" />
+    <wsdl:part name="alcoholemia" type="s:string" />
+    <wsdl:part name="multa" type="s:string" />
+    <wsdl:part name="usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="registrar_salidaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_aspirantes_aprobadosHttpPostIn" />
+  <wsdl:message name="consultar_aspirantes_aprobadosHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_sorteoHttpPostIn">
+    <wsdl:part name="id_usuario" type="s:string" />
+    <wsdl:part name="descripcion" type="s:string" />
+    <wsdl:part name="cantidad" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_sorteoHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_aspirante_favorecidoHttpPostIn">
+    <wsdl:part name="id_aspirante" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ingresar_aspirante_favorecidoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_sorteosHttpPostIn" />
+  <wsdl:message name="consultar_sorteosHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="consultar_aspirantes_sorteadosHttpPostIn">
+    <wsdl:part name="id_sorteo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_aspirantes_sorteadosHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_sorteoHttpPostIn">
+    <wsdl:part name="id_usuario" type="s:string" />
+    <wsdl:part name="id_sorteo" type="s:string" />
+    <wsdl:part name="observaciones" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="eliminar_sorteoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_rolesHttpPostIn">
+    <wsdl:part name="id_usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultar_rolesHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="ingresar_trabajo_comunitario">
+      <wsdl:input message="tns:ingresar_trabajo_comunitarioSoapIn" />
+      <wsdl:output message="tns:ingresar_trabajo_comunitarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_trabajo_comunitario">
+      <wsdl:input message="tns:actualizar_trabajo_comunitarioSoapIn" />
+      <wsdl:output message="tns:actualizar_trabajo_comunitarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_trabajo_comunitario">
+      <wsdl:input message="tns:eliminar_trabajo_comunitarioSoapIn" />
+      <wsdl:output message="tns:eliminar_trabajo_comunitarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_detencion">
+      <wsdl:input message="tns:eliminar_detencionSoapIn" />
+      <wsdl:output message="tns:eliminar_detencionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_detencion_salida">
+      <wsdl:input message="tns:eliminar_detencion_salidaSoapIn" />
+      <wsdl:output message="tns:eliminar_detencion_salidaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_detencion">
+      <wsdl:input message="tns:ingresar_detencionSoapIn" />
+      <wsdl:output message="tns:ingresar_detencionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificar_detencion">
+      <wsdl:input message="tns:modificar_detencionSoapIn" />
+      <wsdl:output message="tns:modificar_detencionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_detenciones">
+      <wsdl:input message="tns:consultar_detencionesSoapIn" />
+      <wsdl:output message="tns:consultar_detencionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_trabajo_comunitario">
+      <wsdl:input message="tns:consultar_trabajo_comunitarioSoapIn" />
+      <wsdl:output message="tns:consultar_trabajo_comunitarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_trabajo_comunitario">
+      <wsdl:input message="tns:consultar_data_trabajo_comunitarioSoapIn" />
+      <wsdl:output message="tns:consultar_data_trabajo_comunitarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_detencion">
+      <wsdl:input message="tns:consultar_data_detencionSoapIn" />
+      <wsdl:output message="tns:consultar_data_detencionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_persona_axis">
+      <wsdl:input message="tns:consultar_data_persona_axisSoapIn" />
+      <wsdl:output message="tns:consultar_data_persona_axisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_persona">
+      <wsdl:input message="tns:consultar_data_personaSoapIn" />
+      <wsdl:output message="tns:consultar_data_personaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_juez">
+      <wsdl:input message="tns:consultar_data_juezSoapIn" />
+      <wsdl:output message="tns:consultar_data_juezSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_usuario">
+      <wsdl:input message="tns:consultar_usuarioSoapIn" />
+      <wsdl:output message="tns:consultar_usuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="conciliar_pago">
+      <wsdl:input message="tns:conciliar_pagoSoapIn" />
+      <wsdl:output message="tns:conciliar_pagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="pago_cep">
+      <wsdl:input message="tns:pago_cepSoapIn" />
+      <wsdl:output message="tns:pago_cepSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="encriptar">
+      <wsdl:input message="tns:encriptarSoapIn" />
+      <wsdl:output message="tns:encriptarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="desencriptar">
+      <wsdl:input message="tns:desencriptarSoapIn" />
+      <wsdl:output message="tns:desencriptarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_juez">
+      <wsdl:input message="tns:ingresar_juezSoapIn" />
+      <wsdl:output message="tns:ingresar_juezSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_detenido">
+      <wsdl:input message="tns:ingresar_detenidoSoapIn" />
+      <wsdl:output message="tns:ingresar_detenidoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_detenidos_nombre">
+      <wsdl:input message="tns:consultar_detenidos_nombreSoapIn" />
+      <wsdl:output message="tns:consultar_detenidos_nombreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_jueces_nombre">
+      <wsdl:input message="tns:consultar_jueces_nombreSoapIn" />
+      <wsdl:output message="tns:consultar_jueces_nombreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registrar_salida">
+      <wsdl:input message="tns:registrar_salidaSoapIn" />
+      <wsdl:output message="tns:registrar_salidaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_aspirantes_aprobados">
+      <wsdl:input message="tns:consultar_aspirantes_aprobadosSoapIn" />
+      <wsdl:output message="tns:consultar_aspirantes_aprobadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_sorteo">
+      <wsdl:input message="tns:ingresar_sorteoSoapIn" />
+      <wsdl:output message="tns:ingresar_sorteoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_aspirante_favorecido">
+      <wsdl:input message="tns:ingresar_aspirante_favorecidoSoapIn" />
+      <wsdl:output message="tns:ingresar_aspirante_favorecidoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_sorteos">
+      <wsdl:input message="tns:consultar_sorteosSoapIn" />
+      <wsdl:output message="tns:consultar_sorteosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_aspirantes_sorteados">
+      <wsdl:input message="tns:consultar_aspirantes_sorteadosSoapIn" />
+      <wsdl:output message="tns:consultar_aspirantes_sorteadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_sorteo">
+      <wsdl:input message="tns:eliminar_sorteoSoapIn" />
+      <wsdl:output message="tns:eliminar_sorteoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_roles">
+      <wsdl:input message="tns:consultar_rolesSoapIn" />
+      <wsdl:output message="tns:consultar_rolesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpGet">
+    <wsdl:operation name="ingresar_trabajo_comunitario">
+      <wsdl:input message="tns:ingresar_trabajo_comunitarioHttpGetIn" />
+      <wsdl:output message="tns:ingresar_trabajo_comunitarioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_trabajo_comunitario">
+      <wsdl:input message="tns:actualizar_trabajo_comunitarioHttpGetIn" />
+      <wsdl:output message="tns:actualizar_trabajo_comunitarioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_trabajo_comunitario">
+      <wsdl:input message="tns:eliminar_trabajo_comunitarioHttpGetIn" />
+      <wsdl:output message="tns:eliminar_trabajo_comunitarioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_detencion">
+      <wsdl:input message="tns:eliminar_detencionHttpGetIn" />
+      <wsdl:output message="tns:eliminar_detencionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_detencion_salida">
+      <wsdl:input message="tns:eliminar_detencion_salidaHttpGetIn" />
+      <wsdl:output message="tns:eliminar_detencion_salidaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_detencion">
+      <wsdl:input message="tns:ingresar_detencionHttpGetIn" />
+      <wsdl:output message="tns:ingresar_detencionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificar_detencion">
+      <wsdl:input message="tns:modificar_detencionHttpGetIn" />
+      <wsdl:output message="tns:modificar_detencionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_detenciones">
+      <wsdl:input message="tns:consultar_detencionesHttpGetIn" />
+      <wsdl:output message="tns:consultar_detencionesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_trabajo_comunitario">
+      <wsdl:input message="tns:consultar_trabajo_comunitarioHttpGetIn" />
+      <wsdl:output message="tns:consultar_trabajo_comunitarioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_trabajo_comunitario">
+      <wsdl:input message="tns:consultar_data_trabajo_comunitarioHttpGetIn" />
+      <wsdl:output message="tns:consultar_data_trabajo_comunitarioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_detencion">
+      <wsdl:input message="tns:consultar_data_detencionHttpGetIn" />
+      <wsdl:output message="tns:consultar_data_detencionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_persona_axis">
+      <wsdl:input message="tns:consultar_data_persona_axisHttpGetIn" />
+      <wsdl:output message="tns:consultar_data_persona_axisHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_persona">
+      <wsdl:input message="tns:consultar_data_personaHttpGetIn" />
+      <wsdl:output message="tns:consultar_data_personaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_juez">
+      <wsdl:input message="tns:consultar_data_juezHttpGetIn" />
+      <wsdl:output message="tns:consultar_data_juezHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_usuario">
+      <wsdl:input message="tns:consultar_usuarioHttpGetIn" />
+      <wsdl:output message="tns:consultar_usuarioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="conciliar_pago">
+      <wsdl:input message="tns:conciliar_pagoHttpGetIn" />
+      <wsdl:output message="tns:conciliar_pagoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="pago_cep">
+      <wsdl:input message="tns:pago_cepHttpGetIn" />
+      <wsdl:output message="tns:pago_cepHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="encriptar">
+      <wsdl:input message="tns:encriptarHttpGetIn" />
+      <wsdl:output message="tns:encriptarHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="desencriptar">
+      <wsdl:input message="tns:desencriptarHttpGetIn" />
+      <wsdl:output message="tns:desencriptarHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_juez">
+      <wsdl:input message="tns:ingresar_juezHttpGetIn" />
+      <wsdl:output message="tns:ingresar_juezHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_detenido">
+      <wsdl:input message="tns:ingresar_detenidoHttpGetIn" />
+      <wsdl:output message="tns:ingresar_detenidoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_detenidos_nombre">
+      <wsdl:input message="tns:consultar_detenidos_nombreHttpGetIn" />
+      <wsdl:output message="tns:consultar_detenidos_nombreHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_jueces_nombre">
+      <wsdl:input message="tns:consultar_jueces_nombreHttpGetIn" />
+      <wsdl:output message="tns:consultar_jueces_nombreHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registrar_salida">
+      <wsdl:input message="tns:registrar_salidaHttpGetIn" />
+      <wsdl:output message="tns:registrar_salidaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_aspirantes_aprobados">
+      <wsdl:input message="tns:consultar_aspirantes_aprobadosHttpGetIn" />
+      <wsdl:output message="tns:consultar_aspirantes_aprobadosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_sorteo">
+      <wsdl:input message="tns:ingresar_sorteoHttpGetIn" />
+      <wsdl:output message="tns:ingresar_sorteoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_aspirante_favorecido">
+      <wsdl:input message="tns:ingresar_aspirante_favorecidoHttpGetIn" />
+      <wsdl:output message="tns:ingresar_aspirante_favorecidoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_sorteos">
+      <wsdl:input message="tns:consultar_sorteosHttpGetIn" />
+      <wsdl:output message="tns:consultar_sorteosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_aspirantes_sorteados">
+      <wsdl:input message="tns:consultar_aspirantes_sorteadosHttpGetIn" />
+      <wsdl:output message="tns:consultar_aspirantes_sorteadosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_sorteo">
+      <wsdl:input message="tns:eliminar_sorteoHttpGetIn" />
+      <wsdl:output message="tns:eliminar_sorteoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_roles">
+      <wsdl:input message="tns:consultar_rolesHttpGetIn" />
+      <wsdl:output message="tns:consultar_rolesHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpPost">
+    <wsdl:operation name="ingresar_trabajo_comunitario">
+      <wsdl:input message="tns:ingresar_trabajo_comunitarioHttpPostIn" />
+      <wsdl:output message="tns:ingresar_trabajo_comunitarioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_trabajo_comunitario">
+      <wsdl:input message="tns:actualizar_trabajo_comunitarioHttpPostIn" />
+      <wsdl:output message="tns:actualizar_trabajo_comunitarioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_trabajo_comunitario">
+      <wsdl:input message="tns:eliminar_trabajo_comunitarioHttpPostIn" />
+      <wsdl:output message="tns:eliminar_trabajo_comunitarioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_detencion">
+      <wsdl:input message="tns:eliminar_detencionHttpPostIn" />
+      <wsdl:output message="tns:eliminar_detencionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_detencion_salida">
+      <wsdl:input message="tns:eliminar_detencion_salidaHttpPostIn" />
+      <wsdl:output message="tns:eliminar_detencion_salidaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_detencion">
+      <wsdl:input message="tns:ingresar_detencionHttpPostIn" />
+      <wsdl:output message="tns:ingresar_detencionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modificar_detencion">
+      <wsdl:input message="tns:modificar_detencionHttpPostIn" />
+      <wsdl:output message="tns:modificar_detencionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_detenciones">
+      <wsdl:input message="tns:consultar_detencionesHttpPostIn" />
+      <wsdl:output message="tns:consultar_detencionesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_trabajo_comunitario">
+      <wsdl:input message="tns:consultar_trabajo_comunitarioHttpPostIn" />
+      <wsdl:output message="tns:consultar_trabajo_comunitarioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_trabajo_comunitario">
+      <wsdl:input message="tns:consultar_data_trabajo_comunitarioHttpPostIn" />
+      <wsdl:output message="tns:consultar_data_trabajo_comunitarioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_detencion">
+      <wsdl:input message="tns:consultar_data_detencionHttpPostIn" />
+      <wsdl:output message="tns:consultar_data_detencionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_persona_axis">
+      <wsdl:input message="tns:consultar_data_persona_axisHttpPostIn" />
+      <wsdl:output message="tns:consultar_data_persona_axisHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_persona">
+      <wsdl:input message="tns:consultar_data_personaHttpPostIn" />
+      <wsdl:output message="tns:consultar_data_personaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_juez">
+      <wsdl:input message="tns:consultar_data_juezHttpPostIn" />
+      <wsdl:output message="tns:consultar_data_juezHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_usuario">
+      <wsdl:input message="tns:consultar_usuarioHttpPostIn" />
+      <wsdl:output message="tns:consultar_usuarioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="conciliar_pago">
+      <wsdl:input message="tns:conciliar_pagoHttpPostIn" />
+      <wsdl:output message="tns:conciliar_pagoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="pago_cep">
+      <wsdl:input message="tns:pago_cepHttpPostIn" />
+      <wsdl:output message="tns:pago_cepHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="encriptar">
+      <wsdl:input message="tns:encriptarHttpPostIn" />
+      <wsdl:output message="tns:encriptarHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="desencriptar">
+      <wsdl:input message="tns:desencriptarHttpPostIn" />
+      <wsdl:output message="tns:desencriptarHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_juez">
+      <wsdl:input message="tns:ingresar_juezHttpPostIn" />
+      <wsdl:output message="tns:ingresar_juezHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_detenido">
+      <wsdl:input message="tns:ingresar_detenidoHttpPostIn" />
+      <wsdl:output message="tns:ingresar_detenidoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_detenidos_nombre">
+      <wsdl:input message="tns:consultar_detenidos_nombreHttpPostIn" />
+      <wsdl:output message="tns:consultar_detenidos_nombreHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_jueces_nombre">
+      <wsdl:input message="tns:consultar_jueces_nombreHttpPostIn" />
+      <wsdl:output message="tns:consultar_jueces_nombreHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registrar_salida">
+      <wsdl:input message="tns:registrar_salidaHttpPostIn" />
+      <wsdl:output message="tns:registrar_salidaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_aspirantes_aprobados">
+      <wsdl:input message="tns:consultar_aspirantes_aprobadosHttpPostIn" />
+      <wsdl:output message="tns:consultar_aspirantes_aprobadosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_sorteo">
+      <wsdl:input message="tns:ingresar_sorteoHttpPostIn" />
+      <wsdl:output message="tns:ingresar_sorteoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_aspirante_favorecido">
+      <wsdl:input message="tns:ingresar_aspirante_favorecidoHttpPostIn" />
+      <wsdl:output message="tns:ingresar_aspirante_favorecidoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_sorteos">
+      <wsdl:input message="tns:consultar_sorteosHttpPostIn" />
+      <wsdl:output message="tns:consultar_sorteosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_aspirantes_sorteados">
+      <wsdl:input message="tns:consultar_aspirantes_sorteadosHttpPostIn" />
+      <wsdl:output message="tns:consultar_aspirantes_sorteadosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_sorteo">
+      <wsdl:input message="tns:eliminar_sorteoHttpPostIn" />
+      <wsdl:output message="tns:eliminar_sorteoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultar_roles">
+      <wsdl:input message="tns:consultar_rolesHttpPostIn" />
+      <wsdl:output message="tns:consultar_rolesHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ingresar_trabajo_comunitario">
+      <soap:operation soapAction="http://tempuri.org/ingresar_trabajo_comunitario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_trabajo_comunitario">
+      <soap:operation soapAction="http://tempuri.org/actualizar_trabajo_comunitario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_trabajo_comunitario">
+      <soap:operation soapAction="http://tempuri.org/eliminar_trabajo_comunitario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_detencion">
+      <soap:operation soapAction="http://tempuri.org/eliminar_detencion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_detencion_salida">
+      <soap:operation soapAction="http://tempuri.org/eliminar_detencion_salida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_detencion">
+      <soap:operation soapAction="http://tempuri.org/ingresar_detencion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificar_detencion">
+      <soap:operation soapAction="http://tempuri.org/modificar_detencion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_detenciones">
+      <soap:operation soapAction="http://tempuri.org/consultar_detenciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_trabajo_comunitario">
+      <soap:operation soapAction="http://tempuri.org/consultar_trabajo_comunitario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_trabajo_comunitario">
+      <soap:operation soapAction="http://tempuri.org/consultar_data_trabajo_comunitario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_detencion">
+      <soap:operation soapAction="http://tempuri.org/consultar_data_detencion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_persona_axis">
+      <soap:operation soapAction="http://tempuri.org/consultar_data_persona_axis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_persona">
+      <soap:operation soapAction="http://tempuri.org/consultar_data_persona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_juez">
+      <soap:operation soapAction="http://tempuri.org/consultar_data_juez" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_usuario">
+      <soap:operation soapAction="http://tempuri.org/consultar_usuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="conciliar_pago">
+      <soap:operation soapAction="http://tempuri.org/conciliar_pago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pago_cep">
+      <soap:operation soapAction="http://tempuri.org/pago_cep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="encriptar">
+      <soap:operation soapAction="http://tempuri.org/encriptar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="desencriptar">
+      <soap:operation soapAction="http://tempuri.org/desencriptar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_juez">
+      <soap:operation soapAction="http://tempuri.org/ingresar_juez" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_detenido">
+      <soap:operation soapAction="http://tempuri.org/ingresar_detenido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_detenidos_nombre">
+      <soap:operation soapAction="http://tempuri.org/consultar_detenidos_nombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_jueces_nombre">
+      <soap:operation soapAction="http://tempuri.org/consultar_jueces_nombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrar_salida">
+      <soap:operation soapAction="http://tempuri.org/registrar_salida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_aspirantes_aprobados">
+      <soap:operation soapAction="http://tempuri.org/consultar_aspirantes_aprobados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_sorteo">
+      <soap:operation soapAction="http://tempuri.org/ingresar_sorteo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_aspirante_favorecido">
+      <soap:operation soapAction="http://tempuri.org/ingresar_aspirante_favorecido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_sorteos">
+      <soap:operation soapAction="http://tempuri.org/consultar_sorteos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_aspirantes_sorteados">
+      <soap:operation soapAction="http://tempuri.org/consultar_aspirantes_sorteados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_sorteo">
+      <soap:operation soapAction="http://tempuri.org/eliminar_sorteo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_roles">
+      <soap:operation soapAction="http://tempuri.org/consultar_roles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ingresar_trabajo_comunitario">
+      <soap12:operation soapAction="http://tempuri.org/ingresar_trabajo_comunitario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_trabajo_comunitario">
+      <soap12:operation soapAction="http://tempuri.org/actualizar_trabajo_comunitario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_trabajo_comunitario">
+      <soap12:operation soapAction="http://tempuri.org/eliminar_trabajo_comunitario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_detencion">
+      <soap12:operation soapAction="http://tempuri.org/eliminar_detencion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_detencion_salida">
+      <soap12:operation soapAction="http://tempuri.org/eliminar_detencion_salida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_detencion">
+      <soap12:operation soapAction="http://tempuri.org/ingresar_detencion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificar_detencion">
+      <soap12:operation soapAction="http://tempuri.org/modificar_detencion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_detenciones">
+      <soap12:operation soapAction="http://tempuri.org/consultar_detenciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_trabajo_comunitario">
+      <soap12:operation soapAction="http://tempuri.org/consultar_trabajo_comunitario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_trabajo_comunitario">
+      <soap12:operation soapAction="http://tempuri.org/consultar_data_trabajo_comunitario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_detencion">
+      <soap12:operation soapAction="http://tempuri.org/consultar_data_detencion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_persona_axis">
+      <soap12:operation soapAction="http://tempuri.org/consultar_data_persona_axis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_persona">
+      <soap12:operation soapAction="http://tempuri.org/consultar_data_persona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_juez">
+      <soap12:operation soapAction="http://tempuri.org/consultar_data_juez" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_usuario">
+      <soap12:operation soapAction="http://tempuri.org/consultar_usuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="conciliar_pago">
+      <soap12:operation soapAction="http://tempuri.org/conciliar_pago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pago_cep">
+      <soap12:operation soapAction="http://tempuri.org/pago_cep" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="encriptar">
+      <soap12:operation soapAction="http://tempuri.org/encriptar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="desencriptar">
+      <soap12:operation soapAction="http://tempuri.org/desencriptar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_juez">
+      <soap12:operation soapAction="http://tempuri.org/ingresar_juez" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_detenido">
+      <soap12:operation soapAction="http://tempuri.org/ingresar_detenido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_detenidos_nombre">
+      <soap12:operation soapAction="http://tempuri.org/consultar_detenidos_nombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_jueces_nombre">
+      <soap12:operation soapAction="http://tempuri.org/consultar_jueces_nombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrar_salida">
+      <soap12:operation soapAction="http://tempuri.org/registrar_salida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_aspirantes_aprobados">
+      <soap12:operation soapAction="http://tempuri.org/consultar_aspirantes_aprobados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_sorteo">
+      <soap12:operation soapAction="http://tempuri.org/ingresar_sorteo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_aspirante_favorecido">
+      <soap12:operation soapAction="http://tempuri.org/ingresar_aspirante_favorecido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_sorteos">
+      <soap12:operation soapAction="http://tempuri.org/consultar_sorteos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_aspirantes_sorteados">
+      <soap12:operation soapAction="http://tempuri.org/consultar_aspirantes_sorteados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_sorteo">
+      <soap12:operation soapAction="http://tempuri.org/eliminar_sorteo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_roles">
+      <soap12:operation soapAction="http://tempuri.org/consultar_roles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpGet" type="tns:Service1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ingresar_trabajo_comunitario">
+      <http:operation location="/ingresar_trabajo_comunitario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_trabajo_comunitario">
+      <http:operation location="/actualizar_trabajo_comunitario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_trabajo_comunitario">
+      <http:operation location="/eliminar_trabajo_comunitario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_detencion">
+      <http:operation location="/eliminar_detencion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_detencion_salida">
+      <http:operation location="/eliminar_detencion_salida" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_detencion">
+      <http:operation location="/ingresar_detencion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificar_detencion">
+      <http:operation location="/modificar_detencion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_detenciones">
+      <http:operation location="/consultar_detenciones" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_trabajo_comunitario">
+      <http:operation location="/consultar_trabajo_comunitario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_trabajo_comunitario">
+      <http:operation location="/consultar_data_trabajo_comunitario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_detencion">
+      <http:operation location="/consultar_data_detencion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_persona_axis">
+      <http:operation location="/consultar_data_persona_axis" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_persona">
+      <http:operation location="/consultar_data_persona" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_juez">
+      <http:operation location="/consultar_data_juez" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_usuario">
+      <http:operation location="/consultar_usuario" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="conciliar_pago">
+      <http:operation location="/conciliar_pago" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pago_cep">
+      <http:operation location="/pago_cep" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="encriptar">
+      <http:operation location="/encriptar" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="desencriptar">
+      <http:operation location="/desencriptar" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_juez">
+      <http:operation location="/ingresar_juez" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_detenido">
+      <http:operation location="/ingresar_detenido" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_detenidos_nombre">
+      <http:operation location="/consultar_detenidos_nombre" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_jueces_nombre">
+      <http:operation location="/consultar_jueces_nombre" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrar_salida">
+      <http:operation location="/registrar_salida" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_aspirantes_aprobados">
+      <http:operation location="/consultar_aspirantes_aprobados" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_sorteo">
+      <http:operation location="/ingresar_sorteo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_aspirante_favorecido">
+      <http:operation location="/ingresar_aspirante_favorecido" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_sorteos">
+      <http:operation location="/consultar_sorteos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_aspirantes_sorteados">
+      <http:operation location="/consultar_aspirantes_sorteados" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_sorteo">
+      <http:operation location="/eliminar_sorteo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_roles">
+      <http:operation location="/consultar_roles" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpPost" type="tns:Service1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ingresar_trabajo_comunitario">
+      <http:operation location="/ingresar_trabajo_comunitario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizar_trabajo_comunitario">
+      <http:operation location="/actualizar_trabajo_comunitario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_trabajo_comunitario">
+      <http:operation location="/eliminar_trabajo_comunitario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_detencion">
+      <http:operation location="/eliminar_detencion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_detencion_salida">
+      <http:operation location="/eliminar_detencion_salida" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_detencion">
+      <http:operation location="/ingresar_detencion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modificar_detencion">
+      <http:operation location="/modificar_detencion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_detenciones">
+      <http:operation location="/consultar_detenciones" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_trabajo_comunitario">
+      <http:operation location="/consultar_trabajo_comunitario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_trabajo_comunitario">
+      <http:operation location="/consultar_data_trabajo_comunitario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_detencion">
+      <http:operation location="/consultar_data_detencion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_persona_axis">
+      <http:operation location="/consultar_data_persona_axis" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_persona">
+      <http:operation location="/consultar_data_persona" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_data_juez">
+      <http:operation location="/consultar_data_juez" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_usuario">
+      <http:operation location="/consultar_usuario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="conciliar_pago">
+      <http:operation location="/conciliar_pago" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pago_cep">
+      <http:operation location="/pago_cep" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="encriptar">
+      <http:operation location="/encriptar" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="desencriptar">
+      <http:operation location="/desencriptar" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_juez">
+      <http:operation location="/ingresar_juez" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_detenido">
+      <http:operation location="/ingresar_detenido" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_detenidos_nombre">
+      <http:operation location="/consultar_detenidos_nombre" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_jueces_nombre">
+      <http:operation location="/consultar_jueces_nombre" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrar_salida">
+      <http:operation location="/registrar_salida" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_aspirantes_aprobados">
+      <http:operation location="/consultar_aspirantes_aprobados" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_sorteo">
+      <http:operation location="/ingresar_sorteo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresar_aspirante_favorecido">
+      <http:operation location="/ingresar_aspirante_favorecido" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_sorteos">
+      <http:operation location="/consultar_sorteos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_aspirantes_sorteados">
+      <http:operation location="/consultar_aspirantes_sorteados" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminar_sorteo">
+      <http:operation location="/eliminar_sorteo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultar_roles">
+      <http:operation location="/consultar_roles" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://secure.comisiontransito.gob.ec/wsHallcon/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://secure.comisiontransito.gob.ec/wsHallcon/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpGet" binding="tns:Service1HttpGet">
+      <http:address location="http://secure.comisiontransito.gob.ec/wsHallcon/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpPost" binding="tns:Service1HttpPost">
+      <http:address location="http://secure.comisiontransito.gob.ec/wsHallcon/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
